@@ -1,13 +1,16 @@
 import React from 'react'
-import { View, Text } from 'react-native'
 import { SafeAreaView } from 'react-native-safe-area-context'
+import CategoriesHome from '../components/categories/CategoriesHome'
+import HeaderHome from '../components/header/HeaderHome'
+import TitleHome from '../components/title/TitleHome'
+
 
 export default function Home() {
     return (
         <SafeAreaView>
-            <View>
-                <Text>hola estas en home</Text>
-            </View>
+            <HeaderHome />
+            <TitleHome />
+            <CategoriesHome />
         </SafeAreaView>
     )
 }

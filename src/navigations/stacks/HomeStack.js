@@ -8,7 +8,7 @@ export default function HomeStack() {
     return (
         <Tab.Navigator>
             <Tab.Screen name="home" component={Home} options={{
-                title: "Home"
+                title: "Chukwudi"
             }} />
         </Tab.Navigator>
     )
