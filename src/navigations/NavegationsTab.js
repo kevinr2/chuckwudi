@@ -52,7 +52,9 @@ export default function NavegationsTab() {
                 options={{
                     tabBarIcon: ({ color, size }) =>
                         (<Icon name="shopping-cart" color={color} size={size} />),
+                    tabBarBadge: 2
                 }}
+
             />
 
         </Tab.Navigator>

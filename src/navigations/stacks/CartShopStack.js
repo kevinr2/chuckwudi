@@ -8,7 +8,7 @@ export default function CartShopStack() {
     return (
         <Tab.Navigator>
             <Tab.Screen name="cartShop" component={CartShop} options={{
-                title: "Cart"
+                title: "My order"
             }} />
         </Tab.Navigator>
     )
