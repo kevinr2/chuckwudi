@@ -1,0 +1,42 @@
+[
+    {
+        "id": 1,
+        "name": "All",
+        "icon": "https://kevinr2.github.io/Recursos/icons/701965.png"
+    },
+    {
+        "id": 2,
+        "name": "Pizza",
+        "icon": "https://cdn-icons-png.flaticon.com/512/599/599995.png"
+    },
+    {
+        "id": 3,
+        "name": "Asian",
+        "icon": "https://kevinr2.github.io/Recursos/icons/1900683.png"
+    },
+    {
+        "id": 4,
+        "name": "Burgers",
+        "icon": "https://kevinr2.github.io/Recursos/icons/883806.png"
+    },
+    {
+        "id": 5,
+        "name": "Barbecue",
+        "icon": "https://kevinr2.github.io/Recursos/icons/933310.png"
+    },
+    {
+        "id": 6,
+        "name": "Dessers",
+        "icon": "https://kevinr2.github.io/Recursos/icons/174394.png"
+    },
+    {
+        "id": 7,
+        "name": "Thai",
+        "icon": "https://kevinr2.github.io/Recursos/icons/135367.png"
+    },
+    {
+        "id": 8,
+        "name": "Sushi",
+        "icon": "https://kevinr2.github.io/Recursos/icons/1900683.png"
+    }
+]

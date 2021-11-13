@@ -7,6 +7,9 @@ import AccountStack from './stacks/AccountStack';
 import CartShopStack from './stacks/CartShopStack';
 import { PalleteColors } from '../assets/Colors'
 
+
+
+
 const Tab = createBottomTabNavigator();
 //colors
 const { primary, purple, purpleDark, orage } = PalleteColors
@@ -44,14 +47,16 @@ export default function NavegationsTab() {
                         (<Icon name="user" color={color} size={size} />),
                 }} />
             <Tab.Screen
-                name="cartShop"
+                name="Cart"
                 component={CartShopStack}
                 options={{
                     tabBarIcon: ({ color, size }) =>
                         (<Icon name="shopping-cart" color={color} size={size} />),
                 }}
             />
+
         </Tab.Navigator>
+
     )
 }
 

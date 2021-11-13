@@ -7,7 +7,7 @@ export default function TitleHome() {
     return (
         <View >
             <Text style={style.title}>Restaurant</Text>
-            <SvgXml style={style.logo} xml={logo} width={18} height={18} />
+            <SvgXml style={style.logo} xml={logo} width={17} height={17} />
         </View>
     )
 }
@@ -19,8 +19,7 @@ const style = StyleSheet.create({
         left: 5
     },
     logo: {
-        left: 110,
+        left: 115,
         top: 18
     }
-
 })

@@ -1,6 +1,8 @@
 import React from 'react'
-import { View, Text, Image, StyleSheet } from 'react-native'
+import { View, Text, Image, StyleSheet, Pressable } from 'react-native'
 import { PalleteColors } from '../../assets/Colors'
+import { useNavigation } from '@react-navigation/native'
+
 
 const { purple, primary, orange } = PalleteColors
 
@@ -8,6 +10,12 @@ const headerImg = require('../../assets/images/headerimage.png')
 const imgSpan = require('../../assets/images/d.png')
 
 export default function HeaderHome() {
+
+    const navigation = useNavigation()
+    const goPokemon = () => {
+        navigation.navigate("info")
+    }
+
     return (
         <View>
             <View style={style.header}>
@@ -20,12 +28,16 @@ export default function HeaderHome() {
                     <Image source={headerImg} style={style.imgHeader} />
 
                 </View>
-
+                <Pressable style={{ bottom: 20, left: 250, position: 'absolute' }} onPress={() => goPokemon()} >
+                    <Text>lean more</Text>
+                </Pressable>
             </View>
         </View>
 
     )
 }
+
+
 
 const style = StyleSheet.create({
     header: {
@@ -41,14 +53,14 @@ const style = StyleSheet.create({
         borderRadius: 20,
     },
     imgHeader: {
-        width: 100,
-        height: '95%',
-        top: 7,
-        left: 15
+        width: 130,
+        height: '105%',
+        bottom: 12,
+        left: 2
     },
     titleHeader: {
         position: 'absolute',
-        left: 140,
+        left: 150,
         top: '30%',
 
     },
@@ -61,6 +73,7 @@ const style = StyleSheet.create({
         height: 15,
         left: 162,
         top: 18
-    }
+    },
+
 
 })
