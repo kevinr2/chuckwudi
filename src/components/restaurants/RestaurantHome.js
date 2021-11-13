@@ -1,10 +1,19 @@
 import React from 'react'
-import { View, Text } from 'react-native'
+import { View, Text, StyleSheet, Image } from 'react-native'
+import Product from './Product'
 
 export default function RestaurantHome() {
     return (
-        <View>
-            <Text>home</Text>
+        <View style={{ display: 'flex', flexDirection: 'row' }}>
+            <Product />
+            <Product />
         </View>
     )
 }
+
+const style = StyleSheet.create({
+    product: {
+        width: 170,
+        height: 110
+    }
+})

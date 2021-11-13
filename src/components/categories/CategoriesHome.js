@@ -1,21 +1,20 @@
 import React from 'react'
-import { View, Text, ScrollView } from 'react-native'
+import { View, Text, FlatList } from 'react-native'
 import IconsCategories from './IconsCategories'
 
-export default function CategoriesHome() {
+export default function CategoriesHome(props) {
+    const { section } = props
+    const { result } = section
 
     return (
         <View style={{ top: 35, left: 5 }} >
-            <ScrollView
-                horizontal={true}
-            >
-                <IconsCategories url='https://kevinr2.github.io/Recursos/icons/701965.png' title="All" />
-                <IconsCategories url='https://kevinr2.github.io/Recursos/icons/135367.png' title="trop" />
-                <IconsCategories url='https://kevinr2.github.io/Recursos/icons/1900683.png' title="asia" />
-                <IconsCategories url='https://kevinr2.github.io/Recursos/icons/883806.png' title=" burger" />
-                <IconsCategories url='https://kevinr2.github.io/Recursos/icons/933310.png' title="burcue" />
-                <IconsCategories url='https://kevinr2.github.io/Recursos/icons/174394.png' title="postre" />
-            </ScrollView>
+            <FlatList
+                horizontal
+                data={result}
+                legacyImplementation={false}
+                keyExtractor={(result) => String(result.id)}
+                renderItem={({ item }) => <IconsCategories url={item.icon} title={item.name} />}
+            />
         </View >
     )
 }

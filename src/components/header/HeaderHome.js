@@ -2,6 +2,8 @@ import React from 'react'
 import { View, Text, Image, StyleSheet, Pressable } from 'react-native'
 import { PalleteColors } from '../../assets/Colors'
 import { useNavigation } from '@react-navigation/native'
+import { SvgXml } from 'react-native-svg'
+import Row from './Row'
 
 
 const { purple, primary, orange } = PalleteColors
@@ -28,8 +30,9 @@ export default function HeaderHome() {
                     <Image source={headerImg} style={style.imgHeader} />
 
                 </View>
-                <Pressable style={{ bottom: 20, left: 250, position: 'absolute' }} onPress={() => goPokemon()} >
-                    <Text>lean more</Text>
+                <Pressable style={style.info} onPress={() => goPokemon()} >
+                    <Text style={style.infoText}>lean more</Text>
+                    <SvgXml style={style.row} xml={Row} width={13} height={13} fill="yellow" />
                 </Pressable>
             </View>
         </View>
@@ -74,6 +77,18 @@ const style = StyleSheet.create({
         left: 162,
         top: 18
     },
-
-
+    info: {
+        bottom: 20,
+        left: 250,
+        position: 'absolute',
+    },
+    infoText: {
+        color: orange
+    },
+    row: {
+        position: 'absolute',
+        top: 4,
+        left: 67,
+        color: orange
+    }
 })
