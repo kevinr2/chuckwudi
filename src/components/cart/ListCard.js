@@ -6,7 +6,6 @@ import Delivery from './Delivery'
 export default function ListCard() {
     return (
         <View >
-
             <Delivery />
             <Cart />
         </View>

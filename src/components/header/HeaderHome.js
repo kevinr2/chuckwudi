@@ -14,7 +14,7 @@ const imgSpan = require('../../assets/images/d.png')
 export default function HeaderHome() {
 
     const navigation = useNavigation()
-    const goPokemon = () => {
+    const goToInfo = () => {
         navigation.navigate("info")
     }
 
@@ -30,7 +30,7 @@ export default function HeaderHome() {
                     <Image source={headerImg} style={style.imgHeader} />
 
                 </View>
-                <Pressable style={style.info} onPress={() => goPokemon()} >
+                <Pressable style={style.info} onPress={() => goToInfo()} >
                     <Text style={style.infoText}>lean more</Text>
                     <SvgXml style={style.row} xml={Row} width={13} height={13} fill="yellow" />
                 </Pressable>
