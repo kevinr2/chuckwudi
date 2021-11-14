@@ -33,4 +33,5 @@ export const getTotal = state => {
 }
 console.log(getTotal)
 export const { addItemCart } = slice.actions;
+export const { removeItemCart } = slice.actions;
 export default slice.reducer;

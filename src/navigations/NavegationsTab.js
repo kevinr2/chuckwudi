@@ -10,6 +10,7 @@ import { PalleteColors } from '../assets/Colors'
 import { useSelector } from 'react-redux';
 import { getCartItem } from '../redux/feature/CartSlice';
 
+
 const Tab = createBottomTabNavigator();
 //colors
 const { primary, purple, purpleDark, orage } = PalleteColors
@@ -54,9 +55,8 @@ export default function NavegationsTab() {
                 options={{
                     tabBarIcon: ({ color, size }) =>
                         (<Icon name="shopping-cart" color={color} size={size} />),
-                    tabBarBadge: badge
+                    tabBarBadge: badge == 0 ? undefined : badge
                 }}
-
             />
 
         </Tab.Navigator>
