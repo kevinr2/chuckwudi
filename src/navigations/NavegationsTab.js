@@ -10,8 +10,6 @@ import { PalleteColors } from '../assets/Colors'
 import { useSelector } from 'react-redux';
 import { getCartItem } from '../redux/feature/CartSlice';
 
-
-
 const Tab = createBottomTabNavigator();
 //colors
 const { primary, purple, purpleDark, orage } = PalleteColors
