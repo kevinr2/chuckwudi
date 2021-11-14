@@ -1,11 +1,14 @@
 import React, { useEffect, useState } from 'react'
 import { View, Text, Image, Button, Pressable, } from 'react-native'
-
+import { useNavigation } from '@react-navigation/native'
+import { useDispatch } from 'react-redux'
+import { addItemCart } from '../redux/feature/CartSlice'
 
 export default function AddCart(props) {
     const { route } = props
     const { params } = route
 
+    const dispatch = useDispatch()
 
     const [amount, setAmount] = useState(0)
     const [totals, setTotals] = useState(0.00)
@@ -33,8 +36,6 @@ export default function AddCart(props) {
         Totalsum()
     }
 
-
-
     return (
         <View style={{ width: '100%', height: 200 }}>
             <Image source={{ uri: params.image }} style={{ width: '100%', height: '100%' }} />
@@ -52,7 +53,17 @@ export default function AddCart(props) {
                 </Pressable>
             </View>
             <View style={{ top: 160 }}>
-                <Button color="#F2C744" title='Add Cart' />
+                <Button color="#F2C744"
+                    title='Add Cart'
+                    onPress={() => {
+                        dispatch(addItemCart({
+                            id: params.id,
+                            name: params.name,
+                            image: params.image,
+                            amount: amount,
+                            total: totals
+                        }))
+                    }} />
             </View>
         </View>
     )

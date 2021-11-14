@@ -4,7 +4,7 @@ import Icon from 'react-native-vector-icons/FontAwesome5'
 
 export default function Delivery() {
     return (
-        <View style={{ display: 'flex', alignItems: 'center' }}>
+        <View style={{ alignItems: 'center' }}>
             <View style={{ width: '95%', backgroundColor: '#9c27b0', height: 180, borderRadius: 25, display: 'flex', justifyContent: 'space-evenly' }}>
                 <View style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-around' }}>
                     <Text style={{ color: 'white', right: 15 }}> 625 St Maria Ave </Text>

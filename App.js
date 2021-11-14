@@ -3,12 +3,16 @@ import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import NavegationsTab from './src/navigations/NavegationsTab';
 
+import { Provider } from 'react-redux'
+import store from './src/redux/store';
 
 export default function App() {
   return (
-    <NavigationContainer>
-      <NavegationsTab />
-    </NavigationContainer>
+    <Provider store={store}>
+      <NavigationContainer>
+        <NavegationsTab />
+      </NavigationContainer>
+    </Provider>
   );
 }
 

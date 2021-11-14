@@ -4,8 +4,6 @@ import Home from '../../screens/Home'
 import Info from '../../screens/Info';
 import AddCart from '../../screens/AddCart';
 
-
-
 const Tab = createStackNavigator();
 
 export default function HomeStack() {
