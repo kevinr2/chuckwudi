@@ -1,14 +1,19 @@
 import React from 'react'
 import { View, Text, Button, StyleSheet } from 'react-native'
+import { credit } from '../../../../Fb'
 
 export default function ButtonAccount() {
+    const logout = () => {
+        alert("log out")
+        credit.auth().signOut()
+    }
     return (
         <View>
             <View style={StyleAccount.buttons1}>
                 <Button color='#F25922' title="edit" />
             </View>
             <View style={StyleAccount.buttons2}>
-                <Button title="logout" color="#533CA6" />
+                <Button title="logout" color="#533CA6" onPress={() => logout()} />
             </View>
         </View>
     )

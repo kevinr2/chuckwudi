@@ -1,17 +1,30 @@
-import React from 'react'
+import { useNavigation } from '@react-navigation/core'
+import React, { useState } from 'react'
 import { View, StyleSheet, Button } from 'react-native'
 import { TextInput } from 'react-native-gesture-handler'
+import { credit } from '../../Fb'
 
 export default function Register() {
+    const navigation = useNavigation()
+    const [Email, setEmail] = useState()
+    const [Password, setPassword] = useState()
+
+    const register = () => {
+        if (Email != undefined && Password != undefined) {
+            alert("Successful registration")
+            navigation.goBack()
+            credit.auth().createUserWithEmailAndPassword(Email, Password).then((user) => {
+            })
+        }
+    }
+
+
     return (
         <View style={styleLogin.inputs} >
-            <TextInput style={styleLogin.borders1} placeholder="Name" />
-            <TextInput style={styleLogin.borders1} placeholder="direccion" />
-            <TextInput style={styleLogin.borders1} placeholder="Email" />
-            <TextInput style={styleLogin.borders1} placeholder="password" />
-
+            <TextInput style={styleLogin.borders1} onChangeText={setEmail} placeholder="Email" />
+            <TextInput style={styleLogin.borders1} secureTextEntry={true} onChangeText={setPassword} placeholder="password" />
             <View style={styleLogin.buttonl} >
-                <Button color="green" title="Register" />
+                <Button color="green" title="Sing up" onPress={() => register()} />
             </View>
         </View>
     )

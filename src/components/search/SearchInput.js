@@ -1,13 +1,17 @@
-import React from 'react'
+import React, { useRef, useState } from 'react'
 import { View, Text, TextInput, Pressable, Button, StyleSheet } from 'react-native'
 
 export default function SearchInput() {
+    const [text, onChangeText] = useState("buscar")
+    console.log(text)
+
     return (
         <View  >
-            <TextInput style={styleSearch.input} placeholder="Buscando..." />
+            <TextInput style={styleSearch.input} onChangeText={onChangeText} />
             <Button title="Search" />
         </View>
     )
+
 }
 const styleSearch = StyleSheet.create({
     input: {
