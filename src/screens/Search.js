@@ -16,5 +16,6 @@ const style = StyleSheet.create({
     search: {
         display: 'flex',
         alignItems: 'center',
+        width: '100%'
     }
 })
