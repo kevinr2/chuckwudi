@@ -2,7 +2,6 @@ import { useNavigation } from '@react-navigation/core'
 import React from 'react'
 import { View, Text, Button, StyleSheet } from 'react-native'
 
-
 export default function Invoice(props) {
 
     const navigate = useNavigation()

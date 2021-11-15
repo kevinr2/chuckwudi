@@ -16,7 +16,6 @@ export default function Login() {
         if (Email != undefined && Password != undefined) {
             credit.auth().signInWithEmailAndPassword(Email, Password).then((userfb) => {
             })
-
         }
     }
     return (

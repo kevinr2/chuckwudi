@@ -9,12 +9,12 @@ import store from './src/redux/store';
 import { credit } from './Fb';
 import AuthStack from './src/navigations/stacks/AuthStack';
 
+
 export default function App() {
 
   const [auth, setAuth] = useState(null)
   useEffect(() => {
     credit.auth().onAuthStateChanged((user) => {
-      console.log(user)
       setAuth(user)
     })
   }, [])

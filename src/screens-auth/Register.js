@@ -17,8 +17,6 @@ export default function Register() {
             })
         }
     }
-
-
     return (
         <View style={styleLogin.inputs} >
             <TextInput style={styleLogin.borders1} onChangeText={setEmail} placeholder="Email" />
