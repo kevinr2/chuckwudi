@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { View, Text, Image, Button, Pressable, } from 'react-native'
+import { View, Text, Image, Button, Pressable, StyleSheet, } from 'react-native'
 import { useNavigation } from '@react-navigation/native'
 import { useDispatch } from 'react-redux'
 import { addItemCart } from '../redux/feature/CartSlice'
@@ -49,19 +49,19 @@ export default function AddCart(props) {
     }
 
     return (
-        <View style={{ width: '100%', height: 200 }}>
-            <Image source={{ uri: params.image }} style={{ width: '100%', height: '100%' }} />
-            <Text style={{ fontSize: 15 }}>Description:</Text>
+        <View style={styleCart.view}>
+            <Image source={{ uri: params.image }} style={styleCart.imgCart} />
+            <Text style={styleCart.text}>Description:</Text>
             <Text style={{ top: 10 }}>Lorem Ipsum is simply dummy text of theok a galley of type and scrambled it to make a type</Text>
-            <Text style={{ top: 30, fontSize: 20, textAlign: 'center' }}>Price: {params.price}</Text>
-            <Text style={{ top: 50, textAlign: 'center', fontSize: 20 }}> total: {(totals).toFixed(2)} </Text>
-            <View style={{ top: 110, display: 'flex', flexDirection: 'row', justifyContent: 'space-around', }}>
-                <Pressable style={{ width: 50, height: 50, left: 30 }} onPress={() => remove()} >
-                    <Text style={{ fontSize: 20, }}>-</Text>
+            <Text style={styleCart.price}>Price: {params.price}</Text>
+            <Text style={styleCart.total}> total: {(totals).toFixed(2)} </Text>
+            <View style={styleCart.amount}>
+                <Pressable style={styleCart.subtration} onPress={() => remove()} >
+                    <Text style={styleCart.text}>-</Text>
                 </Pressable>
-                <Text style={{ fontSize: 20 }}>{amount}</Text>
-                <Pressable style={{ width: 50, height: 50 }} onPress={() => sum()} >
-                    <Text style={{ fontSize: 20 }}>+</Text>
+                <Text style={styleCart.text}>{amount}</Text>
+                <Pressable style={styleCart.sum} onPress={() => sum()} >
+                    <Text style={styleCart.text}>+</Text>
                 </Pressable>
             </View>
             <View style={{ top: 160 }}>
@@ -72,3 +72,42 @@ export default function AddCart(props) {
         </View>
     )
 }
+
+const styleCart = StyleSheet.create({
+    view: {
+        width: '100%',
+        height: 200
+    },
+    imgCart: {
+        width: '100%',
+        height: '100%'
+    },
+    text: {
+        fontSize: 20
+    },
+    price: {
+        top: 30,
+        fontSize: 20,
+        textAlign: 'center'
+    },
+    total: {
+        top: 50,
+        textAlign: 'center',
+        fontSize: 20
+    },
+    amount: {
+        top: 110,
+        display: 'flex',
+        flexDirection: 'row',
+        justifyContent: 'space-around',
+    },
+    subtration: {
+        width: 50,
+        height: 50,
+        left: 30
+    },
+    sum: {
+        width: 50,
+        height: 50
+    }
+})

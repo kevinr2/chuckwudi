@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, Text, StyleSheet, Button, Pressable, TextInputBase } from 'react-native'
+import { View, StyleSheet, Button } from 'react-native'
 import { TextInput } from 'react-native-gesture-handler'
 
 export default function Register() {

@@ -15,11 +15,11 @@ export default function TitleHome() {
 const style = StyleSheet.create({
     title: {
         fontSize: 21,
-        top: 40,
+        top: 35,
         left: 5
     },
     logo: {
         left: 115,
-        top: 18
+        top: 13
     }
 })

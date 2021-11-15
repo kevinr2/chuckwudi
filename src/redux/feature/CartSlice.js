@@ -7,7 +7,9 @@ export const slice = createSlice({
     },
     reducers: {
         addItemCart: (state, action) => {
+            const invoice = (new Date()).getTime()
             state.cartItem.push({
+                invoice: invoice,
                 id: action.payload.id,
                 name: action.payload.name,
                 image: action.payload.image,
@@ -20,7 +22,7 @@ export const slice = createSlice({
         },
         removeItemCart: (state, action) => {
             state.cartItem = state.cartItem.filter(
-                cartItem => cartItem.id !== action.payload.id
+                cartItem => cartItem.invoice !== action.payload.invoice
             )
         }
     }
@@ -31,7 +33,6 @@ export const getTotal = state => {
         return cartItem.totalPrice + total;
     }, 0)
 }
-console.log(getTotal)
 export const { addItemCart } = slice.actions;
 export const { removeItemCart } = slice.actions;
 export default slice.reducer;

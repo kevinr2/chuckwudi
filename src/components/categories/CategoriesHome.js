@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, Text, FlatList } from 'react-native'
+import { View, Text, FlatList, StyleSheet } from 'react-native'
 import IconsCategories from './IconsCategories'
 
 export default function CategoriesHome(props) {
@@ -7,7 +7,7 @@ export default function CategoriesHome(props) {
     const { result } = section
 
     return (
-        <View style={{ top: 35, left: 5 }} >
+        <View style={style.list} >
             <FlatList
                 horizontal
                 data={result}
@@ -18,3 +18,9 @@ export default function CategoriesHome(props) {
         </View >
     )
 }
+const style = StyleSheet.create({
+    list: {
+        top: 35,
+        left: 5
+    }
+})
