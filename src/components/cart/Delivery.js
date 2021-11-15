@@ -1,14 +1,22 @@
-import React from 'react'
-import { View, Text } from 'react-native'
+import React, { useRef } from 'react'
+import { View, Text, Pressable, TextInput } from 'react-native'
 import Icon from 'react-native-vector-icons/FontAwesome5'
 
+
 export default function Delivery() {
+
+    const onChange = () => {
+        const input = useRef()
+    }
     return (
         <View style={{ alignItems: 'center' }}>
             <View style={{ width: '95%', backgroundColor: '#9c27b0', height: 180, borderRadius: 25, display: 'flex', justifyContent: 'space-evenly' }}>
                 <View style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-around' }}>
-                    <Text style={{ color: 'white', right: 15 }}> 625 St Maria Ave </Text>
-                    <Text style={{ color: 'yellow' }}> Edit </Text>
+                    <TextInput id style={{ color: 'white' }} defaultValue="625 St maria ave" />
+                    <Pressable onPress={() => { alert("hola") }}>
+                        <Text style={{ color: 'yellow' }}> Edit </Text>
+                    </Pressable>
+
                 </View>
                 <View style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-around' }}>
                     <View style={{ display: 'flex', flexDirection: 'row' }}>

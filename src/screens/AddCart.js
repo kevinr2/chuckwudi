@@ -9,6 +9,7 @@ export default function AddCart(props) {
     const { params } = route
 
     const dispatch = useDispatch()
+    const navegation = useNavigation()
 
     const [amount, setAmount] = useState(0)
     const [totals, setTotals] = useState(0.00)
@@ -36,6 +37,17 @@ export default function AddCart(props) {
         Totalsum()
     }
 
+    const add = () => {
+        dispatch(addItemCart({
+            id: params.id,
+            name: params.name,
+            image: params.image,
+            amount: amount,
+            total: totals
+        }))
+        navegation.navigate("home")
+    }
+
     return (
         <View style={{ width: '100%', height: 200 }}>
             <Image source={{ uri: params.image }} style={{ width: '100%', height: '100%' }} />
@@ -55,15 +67,7 @@ export default function AddCart(props) {
             <View style={{ top: 160 }}>
                 <Button color="#F2C744"
                     title='Add Cart'
-                    onPress={() => {
-                        dispatch(addItemCart({
-                            id: params.id,
-                            name: params.name,
-                            image: params.image,
-                            amount: amount,
-                            total: totals
-                        }))
-                    }} />
+                    onPress={() => add()} />
             </View>
         </View>
     )
