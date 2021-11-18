@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { SafeAreaView } from 'react-native-safe-area-context'
+import { ScrollView } from 'react-native'
 import CategoriesHome from '../components/categories/CategoriesHome'
 import HeaderHome from '../components/header/HeaderHome'
 import RestaurantHome from '../components/restaurants/RestaurantHome'
@@ -30,11 +30,11 @@ export default function Home() {
 
 
     return (
-        <SafeAreaView>
+        <ScrollView>
             <HeaderHome />
             <TitleHome />
             <CategoriesHome section={recod} />
             <RestaurantHome products={products} />
-        </SafeAreaView>
+        </ScrollView>
     )
 }

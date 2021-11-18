@@ -7,9 +7,11 @@ export default function Checkout(props) {
     const { params } = route
     console.log(props)
     return (
+
         <View>
             <Invoice total={params.total} />
         </View>
+
     )
 }
 

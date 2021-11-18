@@ -9,7 +9,7 @@ export default function RestaurantHome(props) {
     const { result } = products
 
     return (
-        <View style={{ height: 500 }} >
+        <View style={{ height: 250 }} >
             <FlatList
                 horizontal
                 data={result}

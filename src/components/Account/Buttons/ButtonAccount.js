@@ -22,13 +22,14 @@ export default function ButtonAccount() {
 const StyleAccount = StyleSheet.create({
     buttons1: {
         width: 300,
-        top: 100,
+        top: 80,
         left: 30,
         height: 200
     },
     buttons2: {
         width: 300,
-        bottom: 50,
+        height: 150,
+        bottom: 70,
         left: 30
     }
 })

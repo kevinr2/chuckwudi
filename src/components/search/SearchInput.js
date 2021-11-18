@@ -25,7 +25,6 @@ export default function SearchInput() {
         });
         setUnit(filtered)
     }
-    console.log(Unit)
     return (
         <ScrollView>
             <View>

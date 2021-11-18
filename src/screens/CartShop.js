@@ -10,5 +10,6 @@ export default function CartShop() {
                 <ListCard />
             </View>
         </SafeAreaView>
+
     )
 }
